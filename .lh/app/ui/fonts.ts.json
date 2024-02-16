@@ -1,0 +1,26 @@
+{
+    "sourceFile": "app/ui/fonts.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1707749997852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707750374193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+import { Inter, Lusitana } from 'next/font/google';\n+\n+export const inter = Inter({ subsets: ['latin'] });\n+\n+export const lusitana = Lusitana({\n+  weight: ['400', '700'],\n+  subsets: ['latin'],\n+});\n"
+                },
+                {
+                    "date": 1707750879144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,4 @@\n export const lusitana = Lusitana({\n   weight: ['400', '700'],\n   subsets: ['latin'],\n });\n-import { Inter } from 'next/font/google';\n- \n-export const inter = Inter({ subsets: ['latin'] });\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1707749997852,
+            "name": "Commit-0",
+            "content": "import { Inter } from 'next/font/google';\n \nexport const inter = Inter({ subsets: ['latin'] });"
+        }
+    ]
+}
