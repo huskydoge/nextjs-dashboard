@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/lib/definitions.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1708260484708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1708260484708,
+            "name": "Commit-0",
+            "content": "// This file contains type definitions for your data.\n// It describes the shape of the data, and what data type each property should accept.\n// For simplicity of teaching, we're manually defining these types.\n// However, these types are generated automatically if you're using an ORM such as Prisma.\nexport type User = {\n  id: string;\n  name: string;\n  email: string;\n  password: string;\n};\n\nexport type Customer = {\n  id: string;\n  name: string;\n  email: string;\n  image_url: string;\n};\n\nexport type Invoice = {\n  id: string;\n  customer_id: string;\n  amount: number;\n  date: string;\n  // In TypeScript, this is called a string union type.\n  // It means that the \"status\" property can only be one of the two strings: 'pending' or 'paid'.\n  status: 'pending' | 'paid';\n};\n\nexport type Revenue = {\n  month: string;\n  revenue: number;\n};\n\nexport type LatestInvoice = {\n  id: string;\n  name: string;\n  image_url: string;\n  email: string;\n  amount: string;\n};\n\n// The database returns a number for amount, but we later format it to a string with the formatCurrency function\nexport type LatestInvoiceRaw = Omit<LatestInvoice, 'amount'> & {\n  amount: number;\n};\n\nexport type InvoicesTable = {\n  id: string;\n  customer_id: string;\n  name: string;\n  email: string;\n  image_url: string;\n  date: string;\n  amount: number;\n  status: 'pending' | 'paid';\n};\n\nexport type CustomersTableType = {\n  id: string;\n  name: string;\n  email: string;\n  image_url: string;\n  total_invoices: number;\n  total_pending: number;\n  total_paid: number;\n};\n\nexport type FormattedCustomersTable = {\n  id: string;\n  name: string;\n  email: string;\n  image_url: string;\n  total_invoices: number;\n  total_pending: string;\n  total_paid: string;\n};\n\nexport type CustomerField = {\n  id: string;\n  name: string;\n};\n\nexport type InvoiceForm = {\n  id: string;\n  customer_id: string;\n  amount: number;\n  status: 'pending' | 'paid';\n};\n"
+        }
+    ]
+}
